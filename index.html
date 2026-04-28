@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Love Arcade 💜💙</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Poppins&family=Pacifico&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<!-- 🎬 START SCREEN -->
+<div id="startScreen">
+  <h1>💜 LOVE ARCADE 💙</h1>
+  <button onclick="startGame()">PRESS START ▶</button>
+</div>
+
+<!-- ⏳ LOADING -->
+<div id="loading" class="hidden">
+  <p>Loading Love World...</p>
+</div>
+
+<!-- 🔐 LOGIN -->
+<div id="login" class="hidden loginScreen">
+
+  <div class="loginCard">
+    <h1>💜 ARCADE ACCESS 💙</h1>
+    <p>Enter the key to unlock</p>
+
+    <div class="inputBox">
+      <input id="pass" type="password" placeholder="Password">
+
+      <button onclick="togglePass()">👁️</button>
+    </div>
+
+    <button onclick="unlock()">UNLOCK 💖</button>
+
+    <p id="msg"></p>
+    <p class="hint">Hint: Cs + Month 💜</p>
+  </div>
+
+</div>
+
+<!-- 🎮 MAIN GAME -->
+<div id="main" class="hidden">
+
+  <h1>💜 Love Arcade 💙</h1>
+
+  <div class="menu">
+    <button onclick="openSection('wheel')">🎡 Wheel</button>
+    <button onclick="openSection('heart')">💜 Heart</button>
+    <button onclick="openSection('told')">💬 Truth/Dare</button>
+    <button onclick="openSection('love')">💖 Love</button>
+  </div>
+
+  <div id="panel" class="panel hidden">
+
+    <button onclick="closePanel()">✖</button>
+
+    <!-- 🎡 WHEEL -->
+    <div id="wheelSection" class="content hidden">
+      <h2>🎡 Spin My Wheel</h2>
+      <div id="wheel"></div>
+      <button onclick="spinWheel()">SPIN 💫</button>
+      <h1 id="wheelResult"></h1>
+    </div>
+
+    <!-- 💜 HEART -->
+    <div id="heartSection" class="content hidden">
+      <h2>💜 Heart Catch</h2>
+      <div id="loveBar"><div id="loveFill"></div></div>
+      <p>Score: <span id="score">0</span></p>
+      <div id="heartArea"></div>
+    </div>
+
+    <!-- 💬 TRUTH OR DARE -->
+    <div id="toldSection" class="content hidden">
+      <h2>💬 Truth or Love Dare 💘</h2>
+      <button onclick="pickTruth()">💬 Truth</button>
+      <button onclick="pickDare()">💘 Dare</button>
+      <h1 id="toldResult"></h1>
+    </div>
+
+    <!-- 💖 LOVE -->
+    <div id="loveSection" class="content hidden">
+      <h2>💖 Why I Love You</h2>
+      <div class="love">
+        God-fearing 💜 Faithful 💙 Kind 💜 Smart 💙 Talented 💜 Gwapoo 💙<br><br>
+        You make me feel safe 💜<br>
+        You support me always 💙<br>
+        You are my home 💜
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<!-- 💥 OVERLAY -->
+<div id="overlay" class="hidden">
+  <div id="overlayText"></div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
